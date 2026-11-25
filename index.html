@@ -1,0 +1,956 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>God Shashank — Student Developer & Aspiring Software Engineer</title>
+  <meta
+    name="description"
+    content="Portfolio of God Shashank, a student developer and aspiring software engineer building practical full-stack web applications with React, TypeScript, Node.js, and MySQL."
+  />
+  <meta name="author" content="God Shashank" />
+  <meta
+    name="keywords"
+    content="God Shashank, student developer, aspiring software engineer, full-stack developer, React, TypeScript, Node.js, MySQL, portfolio"
+  />
+  <meta name="theme-color" content="#07070d" />
+  <link
+    rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop stop-color='%237c6cff'/><stop offset='1' stop-color='%2322d3ee'/></linearGradient></defs><rect width='64' height='64' rx='14' fill='%230b0b14'/><text x='32' y='43' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='url(%23g)' text-anchor='middle'>GS</text></svg>"
+  />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="God Shashank" />
+  <meta property="og:title" content="God Shashank — Student Developer & Aspiring Software Engineer" />
+  <meta
+    property="og:description"
+    content="Student developer building practical full-stack web applications with React, TypeScript, Node.js, and MySQL."
+  />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="God Shashank — Student Developer" />
+  <meta
+    name="twitter:description"
+    content="Student developer building practical full-stack web applications with React, TypeScript, Node.js, and MySQL."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add("js");
+      try {
+        var saved = localStorage.getItem("gs-theme");
+        var theme =
+          saved === "light" || saved === "dark"
+            ? saved
+            : window.matchMedia("(prefers-color-scheme: light)").matches
+              ? "light"
+              : "dark";
+        root.dataset.theme = theme;
+      } catch (err) {
+        root.dataset.theme = "dark";
+      }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "God Shashank",
+      "jobTitle": "Student Developer",
+      "description": "Student developer and aspiring software engineer building practical full-stack web applications.",
+      "url": "https://github.com/shashank192008",
+      "sameAs": ["https://github.com/shashank192008"],
+      "knowsAbout": ["TypeScript", "JavaScript", "React", "Node.js", "Express.js", "MySQL", "Tailwind CSS"]
+    }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
+
+  <!-- Icon sprite -->
+  <svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5"/><path d="m6 11 6-6 6 6"/></symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="m6 13 6 6 6-6"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24"><path d="m4 17 6-6-6-6"/><path d="M12 19h8"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7l10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="7" rx="2"/><rect x="2" y="14" width="20" height="7" rx="2"/><path d="M6 6.5h.01M6 17.5h.01"/></symbol>
+    <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m20 6-11 11-5-5"/></symbol>
+    <symbol id="i-check-circle" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4 20-7z"/><path d="M22 2 11 13"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="m12 3 1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/><path d="M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9L19 15z"/></symbol>
+    <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></symbol>
+    <symbol id="i-git-branch" viewBox="0 0 24 24"><circle cx="6" cy="3" r="3"/><circle cx="6" cy="21" r="3"/><circle cx="18" cy="6" r="3"/><path d="M6 6v12M18 9a9 9 0 0 1-9 9"/></symbol>
+    <symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></symbol>
+    <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M12 14l4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></symbol>
+  </svg>
+
+  <div class="bg-decor" aria-hidden="true">
+    <div class="bg-grid"></div>
+    <div class="aurora aurora-a"></div>
+    <div class="aurora aurora-b"></div>
+    <div class="aurora aurora-c"></div>
+    <span class="glyph glyph-a">{ }</span>
+    <span class="glyph glyph-b">&lt;/&gt;</span>
+    <span class="glyph glyph-c">=&gt;</span>
+    <span class="glyph glyph-d">;</span>
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="God Shashank — back to top">
+        <span class="brand-mark">GS</span>
+        <span class="brand-text">God Shashank<span class="brand-dot">.</span></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Primary">
+        <span class="nav-indicator" aria-hidden="true"></span>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Work</a>
+        <a href="#journey">Journey</a>
+        <a href="#learning">Learning</a>
+        <a href="#github">GitHub</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a
+          class="icon-btn github-btn"
+          href="https://github.com/shashank192008"
+          target="_blank"
+          rel="noopener"
+          aria-label="God Shashank on GitHub"
+        >
+          <svg class="icon" aria-hidden="true"><use href="#i-github" /></svg>
+        </a>
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
+          <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun" /></svg>
+          <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon" /></svg>
+        </button>
+        <button
+          class="icon-btn menu-btn"
+          id="menu-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="nav"
+        >
+          <svg class="icon icon-menu" aria-hidden="true"><use href="#i-menu" /></svg>
+          <svg class="icon icon-close" aria-hidden="true"><use href="#i-close" /></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow hero-reveal" style="--d: 0.02s">
+            <span class="status-dot" aria-hidden="true"></span>
+            Student Developer · Aspiring Software Engineer
+          </p>
+
+          <h1 id="hero-title" class="hero-reveal" style="--d: 0.08s">
+            Turning ideas into<br />
+            <span class="grad-text">digital experiences.</span>
+          </h1>
+
+          <p class="hero-lede hero-reveal" style="--d: 0.16s">
+            I'm God Shashank, a student developer building full-stack web applications that turn
+            practical problems into clean, usable digital products.
+          </p>
+
+          <div class="hero-actions hero-reveal" style="--d: 0.24s">
+            <a class="btn btn-primary" href="#projects">
+              Explore my work
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg>
+            </a>
+            <a class="btn btn-ghost" href="https://github.com/shashank192008" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-github" /></svg>
+              View GitHub
+            </a>
+            <a class="btn btn-text" href="#contact">
+              Contact me
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right" /></svg>
+            </a>
+          </div>
+
+          <ul class="hero-stack hero-reveal" style="--d: 0.32s" aria-label="Core technologies">
+            <li>TypeScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>MySQL</li>
+          </ul>
+
+          <a class="scroll-cue hero-reveal" style="--d: 0.4s" href="#about" aria-label="Scroll to about section">
+            <span class="mouse" aria-hidden="true"></span>
+            Scroll to explore
+          </a>
+        </div>
+
+        <div class="hero-visual hero-reveal" style="--d: 0.2s">
+          <div class="hero-glow" aria-hidden="true"></div>
+
+          <div class="code-window" role="img" aria-label="A TypeScript snippet describing God Shashank's developer profile">
+            <div class="code-toolbar">
+              <span class="traffic-lights" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="code-file">developer.ts</span>
+              <span class="code-lang">TS</span>
+            </div>
+            <pre class="code-body"><code><span class="c-key">const</span> <span class="c-var">developer</span> = {
+  <span class="c-prop">name</span>: <span class="c-str">"God Shashank"</span>,
+  <span class="c-prop">role</span>: <span class="c-str">"Student Developer"</span>,
+  <span class="c-prop">focus</span>: <span class="c-str">"Full-stack web"</span>,
+  <span class="c-prop">stack</span>: [<span class="c-str">"React"</span>, <span class="c-str">"TypeScript"</span>, <span class="c-str">"Node"</span>],
+  <span class="c-prop">mindset</span>: <span class="c-str">"learn → build → refine"</span>,
+  <span class="c-prop">status</span>: <span class="c-str">"building in public"</span>,
+};</code></pre>
+            <div class="code-status">
+              <span class="status-dot" aria-hidden="true"></span>
+              open to opportunities
+              <span class="code-cursor" aria-hidden="true"></span>
+            </div>
+          </div>
+
+          <div class="float-chip chip-react" aria-hidden="true">
+            <span class="chip-dot chip-dot-cyan"></span> React
+          </div>
+          <div class="float-chip chip-ts" aria-hidden="true">
+            <span class="chip-dot chip-dot-blue"></span> TypeScript
+          </div>
+          <div class="float-chip chip-mysql" aria-hidden="true">
+            <span class="chip-dot chip-dot-lime"></span> MySQL
+          </div>
+          <div class="float-chip chip-terminal" aria-hidden="true">
+            <svg class="icon"><use href="#i-terminal" /></svg> npm run dev
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STACK STRIP ============ -->
+    <div class="stack-strip" aria-label="Technologies I build with">
+      <div class="stack-track">
+        <div class="stack-group">
+          <span>TypeScript</span><i aria-hidden="true"></i>
+          <span>React</span><i aria-hidden="true"></i>
+          <span>Tailwind CSS</span><i aria-hidden="true"></i>
+          <span>Node.js</span><i aria-hidden="true"></i>
+          <span>Express</span><i aria-hidden="true"></i>
+          <span>MySQL</span><i aria-hidden="true"></i>
+          <span>REST APIs</span><i aria-hidden="true"></i>
+          <span>Git</span><i aria-hidden="true"></i>
+        </div>
+        <div class="stack-group" aria-hidden="true">
+          <span>TypeScript</span><i></i>
+          <span>React</span><i></i>
+          <span>Tailwind CSS</span><i></i>
+          <span>Node.js</span><i></i>
+          <span>Express</span><i></i>
+          <span>MySQL</span><i></i>
+          <span>REST APIs</span><i></i>
+          <span>Git</span><i></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section container" id="about" aria-labelledby="about-title">
+      <div class="section-head reveal">
+        <p class="kicker">01 · About</p>
+        <h2 id="about-title">Building with curiosity,<br /><span class="muted-head">shipping with intent.</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p class="about-lede">
+            I'm God Shashank, a student developer working toward becoming a software engineer. I enjoy
+            turning ideas into working products — especially full-stack applications that solve practical
+            problems.
+          </p>
+          <p>
+            I learn by building. My approach is to understand the problem, design the data and flow, build a
+            clean interface, then refine it with feedback. I care about readable code, responsive layouts,
+            and software that people can actually use.
+          </p>
+          <p>
+            Right now, I'm strengthening my fundamentals in TypeScript, React, Node.js, and relational
+            databases while sharing what I build in public.
+          </p>
+
+          <ul class="about-points">
+            <li>
+              <span class="point-icon"><svg class="icon" aria-hidden="true"><use href="#i-book" /></svg></span>
+              <div><strong>Learn by building</strong><span>Every project is a chance to understand something new.</span></div>
+            </li>
+            <li>
+              <span class="point-icon"><svg class="icon" aria-hidden="true"><use href="#i-layers" /></svg></span>
+              <div><strong>Full-stack thinking</strong><span>From database schema to the final interface.</span></div>
+            </li>
+            <li>
+              <span class="point-icon"><svg class="icon" aria-hidden="true"><use href="#i-check-circle" /></svg></span>
+              <div><strong>Useful over flashy</strong><span>Clear, accessible experiences that work.</span></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="about-visual reveal" style="--delay: 0.12s">
+          <div class="profile-card">
+            <div class="profile-top">
+              <div class="profile-avatar" aria-hidden="true">GS</div>
+              <div class="profile-id">
+                <h3>God Shashank</h3>
+                <p>Student Developer</p>
+              </div>
+              <span class="status-pill"><span class="status-dot" aria-hidden="true"></span> Building</span>
+            </div>
+
+            <div class="terminal" role="img" aria-label="A short terminal snapshot of my focus">
+              <div class="terminal-bar">
+                <span class="traffic-lights" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span>~/god-shashank</span>
+              </div>
+              <pre class="terminal-body"><code><span class="t-prompt">$</span> whoami
+<span class="t-out">god-shashank</span>
+<span class="t-prompt">$</span> cat focus.txt
+<span class="t-out">full-stack web development</span>
+<span class="t-prompt">$</span> git log --oneline -1
+<span class="t-out">building practical projects</span>
+<span class="t-prompt">$</span> <span class="t-cursor" aria-hidden="true"></span></code></pre>
+            </div>
+
+            <div class="profile-tags">
+              <span>Student</span>
+              <span>Developer</span>
+              <span>Aspiring SWE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section container" id="skills" aria-labelledby="skills-title">
+      <div class="section-head reveal">
+        <p class="kicker">02 · Skills</p>
+        <h2 id="skills-title">Tools I use to bring ideas to life.</h2>
+        <p>Technologies I've worked with in my projects, plus the fundamentals I keep practicing.</p>
+      </div>
+
+      <div class="skill-tabs reveal" role="tablist" aria-label="Skill categories">
+        <button class="skill-tab is-active" role="tab" id="tab-languages" aria-selected="true" aria-controls="panel-languages" tabindex="0">Languages</button>
+        <button class="skill-tab" role="tab" id="tab-frontend" aria-selected="false" aria-controls="panel-frontend" tabindex="-1">Frontend</button>
+        <button class="skill-tab" role="tab" id="tab-backend" aria-selected="false" aria-controls="panel-backend" tabindex="-1">Backend</button>
+        <button class="skill-tab" role="tab" id="tab-databases" aria-selected="false" aria-controls="panel-databases" tabindex="-1">Databases</button>
+        <button class="skill-tab" role="tab" id="tab-tools" aria-selected="false" aria-controls="panel-tools" tabindex="-1">Tools</button>
+      </div>
+
+      <div class="skill-panels reveal" style="--delay: 0.08s">
+        <div class="skill-panel" id="panel-languages" role="tabpanel" aria-labelledby="tab-languages" tabindex="0">
+          <div class="skill-grid">
+            <article class="skill-card">
+              <span class="skill-icon icon-ts" aria-hidden="true">TS</span>
+              <div><h3>TypeScript</h3><p>Typed JavaScript for reliable applications.</p></div>
+            </article>
+            <article class="skill-card">
+              <span class="skill-icon icon-js" aria-hidden="true">JS</span>
+              <div><h3>JavaScript</h3><p>The core language of the web.</p></div>
+            </article>
+            <article class="skill-card">
+              <span class="skill-icon icon-sql" aria-hidden="true">SQL</span>
+              <div><h3>SQL</h3><p>Querying and shaping relational data.</p></div>
+            </article>
+            <article class="skill-card">
+              <span class="skill-icon icon-html" aria-hidden="true">H5</span>
+              <div><h3>HTML5</h3><p>Semantic, accessible page structure.</p></div>
+            </article>
+            <article class="skill-card">
+              <span class="skill-icon icon-css" aria-hidden="true">C3</span>
+              <div><h3>CSS3</h3><p>Responsive layouts and visual polish.</p></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="skill-panel" id="panel-frontend" role="tabpanel" aria-labelledby="tab-frontend" tabindex="0" hidden>
+          <div class="skill-grid">
+            <article class="skill-card">
+              <span class="skill-icon icon-react" aria-hidden="true">R</span>
+              <div><h3>React</h3><p>Component-driven interfaces with clean state flow.</p></div>
+            </article>
+            <article class="skill-card">
+              <span class="skill-icon icon-tailwind" aria-hidden="true">TW</span>
+              <div><h3>Tailwind CSS</h3><p>Utility-first styling for fast, consistent UI.</p></div>
+            </article>
+            <article class="skill-card">
+              <span class="skill-icon icon-vite" aria-hidden="true">V</span>
+              <div><h3>Vite</h3><p>Fast development server and production builds.</p></div>
+            </article>
+            <article class="skill-card">
+              <span class="skill-icon icon-responsive" aria-hidden="true">RQ</span>
+              <div><h3>Responsive UI</h3><p>Mobile-first layouts that hold up at every size.</p></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="skill-panel" id="panel-backend" role="tabpanel" aria-labelledby="tab-backend" tabindex="0" hidden>
+          <div class="skill-grid">
+            <article class="skill-card">
+              <span class="skill-icon icon-node" aria-hidden="true">N</span>
+              <div><h3>Node.js</h3><p>Server-side JavaScript and application logic.</p></div>
+            </article>
+            <article class="skill-card">
+              <span class="skill-icon icon-express" aria-hidden="true">EX</span>
+              <div><h3>Express.js</h3><p>Routing, middleware, and REST endpoints.</p></div>
+            </article>
+            <article class="skill-card">
+              <span class="skill-icon icon-api" aria-hidden="true">API</span>
+              <div><h3>REST APIs</h3><p>Resource-based API design and data flow.</p></div>
+            </article>
+            <article class="skill-card">
+              <span class="skill-icon icon-shield" aria-hidden="true">V</span>
+              <div><h3>Input validation</h3><p>Safer requests and predictable server responses.</p></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="skill-panel" id="panel-databases" role="tabpanel" aria-labelledby="tab-databases" tabindex="0" hidden>
+          <div class="skill-grid">
+            <article class="skill-card">
+              <span class="skill-icon icon-mysql" aria-hidden="true">MY</span>
+              <div><h3>MySQL</h3><p>Relational data storage and querying.</p></div>
+            </article>
+            <article class="skill-card">
+              <span class="skill-icon icon-schema" aria-hidden="true">DB</span>
+              <div><h3>Schema design</h3><p>Tables, keys, relationships, and constraints.</p></div>
+            </article>
+            <article class="skill-card">
+              <span class="skill-icon icon-join" aria-hidden="true">JN</span>
+              <div><h3>Joins &amp; views</h3><p>Shaping related data into useful results.</p></div>
+            </article>
+            <article class="skill-card">
+              <span class="skill-icon icon-acid" aria-hidden="true">AC</span>
+              <div><h3>ACID transactions</h3><p>Consistent, reliable database writes.</p></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="skill-panel" id="panel-tools" role="tabpanel" aria-labelledby="tab-tools" tabindex="0" hidden>
+          <div class="skill-grid">
+            <article class="skill-card">
+              <span class="skill-icon icon-git" aria-hidden="true">GIT</span>
+              <div><h3>Git</h3><p>Version control and day-to-day workflow.</p></div>
+            </article>
+            <article class="skill-card">
+              <span class="skill-icon icon-github" aria-hidden="true"><svg class="icon"><use href="#i-github" /></svg></span>
+              <div><h3>GitHub</h3><p>Code hosting, project history, and collaboration.</p></div>
+            </article>
+            <article class="skill-card">
+              <span class="skill-icon icon-npm" aria-hidden="true">npm</span>
+              <div><h3>npm</h3><p>Dependency management and project scripts.</p></div>
+            </article>
+            <article class="skill-card">
+              <span class="skill-icon icon-workbench" aria-hidden="true">WB</span>
+              <div><h3>MySQL Workbench</h3><p>Running schemas, seeds, and queries locally.</p></div>
+            </article>
+            <article class="skill-card">
+              <span class="skill-icon icon-vscode" aria-hidden="true">&lt;/&gt;</span>
+              <div><h3>VS Code</h3><p>My editor for writing and debugging code.</p></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section container" id="projects" aria-labelledby="projects-title">
+      <div class="section-head reveal">
+        <p class="kicker">03 · Selected work</p>
+        <h2 id="projects-title">Projects I've built.</h2>
+        <p>Practical applications where I can own the problem, the data, and the interface.</p>
+      </div>
+
+      <div class="project-filters reveal" role="group" aria-label="Filter projects">
+        <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-btn" type="button" data-filter="fullstack" aria-pressed="false">Full-stack</button>
+        <button class="filter-btn" type="button" data-filter="web-app" aria-pressed="false">Web app</button>
+      </div>
+
+      <div class="project-grid">
+        <!-- MSME Sahayak — verified details from the public repository -->
+        <article class="project-card project-featured reveal" data-category="fullstack">
+          <div class="project-preview preview-msme" aria-hidden="true">
+            <div class="mock-window">
+              <div class="mock-toolbar">
+                <span class="traffic-lights"><i></i><i></i><i></i></span>
+                <span class="mock-file">msme-sahayak / dashboard</span>
+                <span class="mock-chip">MySQL</span>
+              </div>
+              <div class="mock-body">
+                <aside class="mock-sidebar">
+                  <span class="mock-logo">MS</span>
+                  <span class="mock-nav is-active"></span>
+                  <span class="mock-nav"></span>
+                  <span class="mock-nav short"></span>
+                  <span class="mock-nav"></span>
+                </aside>
+                <div class="mock-main">
+                  <div class="mock-kpis">
+                    <div class="mock-kpi"><span class="mock-label"></span><strong>₹</strong><span class="mock-bar"></span></div>
+                    <div class="mock-kpi"><span class="mock-label"></span><strong>45d</strong><span class="mock-bar"></span></div>
+                    <div class="mock-kpi"><span class="mock-label"></span><strong>DB</strong><span class="mock-bar"></span></div>
+                  </div>
+                  <div class="mock-panel">
+                    <div class="mock-panel-head"><span class="mock-title-bar"></span><span class="mock-pill">Overdue</span></div>
+                    <div class="mock-row mock-row-head"><span>Invoice</span><span>Due</span><span>Status</span></div>
+                    <div class="mock-row"><span class="mock-cell"></span><span class="mock-cell short"></span><span class="mock-status"></span></div>
+                    <div class="mock-row"><span class="mock-cell"></span><span class="mock-cell short"></span><span class="mock-status paid"></span></div>
+                    <div class="mock-row"><span class="mock-cell"></span><span class="mock-cell short"></span><span class="mock-status"></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span class="preview-label">Project preview</span>
+          </div>
+
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="badge badge-featured">Featured</span>
+              <span class="badge">Full-stack</span>
+            </div>
+            <h3>MSME Sahayak</h3>
+            <p class="project-subtitle">Business support &amp; resource portal for Indian MSMEs.</p>
+            <p class="project-desc">
+              An integrated digital platform designed to bring delayed payments, inventory, government
+              schemes, and working-capital planning into one place.
+            </p>
+            <ul class="project-features">
+              <li>Invoice ledger with 45-day MSMED due-date tracking and partial payments</li>
+              <li>Follow-up assistant with gentle, formal, and statutory notice templates</li>
+              <li>Inventory tracking, low-stock alerts, and a government scheme directory</li>
+              <li>Working-capital impact simulator and an interactive DBMS practice lab</li>
+            </ul>
+            <ul class="tech-chips" aria-label="Technologies used">
+              <li>React 19</li>
+              <li>TypeScript</li>
+              <li>Tailwind CSS</li>
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>MySQL</li>
+            </ul>
+            <div class="project-links">
+              <a
+                class="btn btn-sm btn-primary"
+                href="https://github.com/shashank192008/msme-sahayak"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg class="icon" aria-hidden="true"><use href="#i-github" /></svg>
+                View source
+              </a>
+              <span class="demo-note">Public demo not available yet</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- VolunteerHub — add verified features and links when available -->
+        <article class="project-card reveal" data-category="web-app" style="--delay: 0.1s">
+          <div class="project-preview preview-volunteer" aria-hidden="true">
+            <div class="volunteer-mock">
+              <div class="volunteer-head">
+                <span class="volunteer-mark">VH</span>
+                <span class="volunteer-name">VolunteerHub</span>
+                <span class="volunteer-pill">Web app</span>
+              </div>
+              <div class="volunteer-cards">
+                <div class="volunteer-card"><svg class="icon"><use href="#i-users" /></svg><span class="v-bar"></span><span class="v-bar short"></span></div>
+                <div class="volunteer-card"><svg class="icon"><use href="#i-calendar" /></svg><span class="v-bar"></span><span class="v-bar short"></span></div>
+                <div class="volunteer-card"><svg class="icon"><use href="#i-globe" /></svg><span class="v-bar"></span><span class="v-bar short"></span></div>
+              </div>
+              <div class="volunteer-calendar">
+                <span class="v-cal-title"></span>
+                <div class="v-cal-grid">
+                  <i></i><i></i><i></i><i></i><i class="is-on"></i><i></i><i></i>
+                  <i></i><i></i><i class="is-on"></i><i></i><i></i><i></i><i></i>
+                  <i></i><i class="is-on"></i><i></i><i></i><i></i><i class="is-on"></i><i></i>
+                  <i></i><i></i><i></i><i class="is-on"></i><i></i><i></i><i></i>
+                </div>
+              </div>
+            </div>
+            <span class="preview-label">Concept preview</span>
+          </div>
+
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="badge badge-progress">Web app</span>
+              <span class="badge">Details coming soon</span>
+            </div>
+            <h3>VolunteerHub</h3>
+            <p class="project-subtitle">A volunteer-focused web platform.</p>
+            <p class="project-desc">
+              I'm preparing the public overview, feature list, and demo links for this project. Verified
+              details will be added here as soon as they're ready.
+            </p>
+            <div class="project-coming">
+              <span class="coming-label">Public write-up in progress</span>
+              <p>Overview · Features · Screenshots · Links</p>
+            </div>
+            <div class="project-links">
+              <a
+                class="btn btn-sm btn-ghost"
+                href="https://github.com/shashank192008"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg class="icon" aria-hidden="true"><use href="#i-github" /></svg>
+                GitHub profile
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="project-footnote reveal">
+        More projects are on the way. Follow along on
+        <a href="https://github.com/shashank192008" target="_blank" rel="noopener">GitHub</a>.
+      </p>
+    </section>
+
+    <!-- ============ JOURNEY ============ -->
+    <section class="section container" id="journey" aria-labelledby="journey-title">
+      <div class="section-head reveal">
+        <p class="kicker">04 · My journey</p>
+        <h2 id="journey-title">Learning in public,<br /><span class="muted-head">one project at a time.</span></h2>
+        <p>A few milestones from my developer journey so far.</p>
+      </div>
+
+      <!-- Add education milestones to this timeline when available. -->
+      <ol class="timeline">
+        <li class="timeline-item reveal">
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="pill">Nov 2026</span>
+              <span class="pill ghost">Milestone</span>
+            </div>
+            <h3>Started building in public</h3>
+            <p>Created my GitHub profile and began sharing projects as I learn.</p>
+          </div>
+        </li>
+        <li class="timeline-item reveal" style="--delay: 0.06s">
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="pill">Nov 2026</span>
+              <span class="pill ghost">Project</span>
+            </div>
+            <h3>MSME Sahayak</h3>
+            <p>Built and published a full-stack MSME support platform with React, TypeScript, Express, and MySQL.</p>
+          </div>
+        </li>
+        <li class="timeline-item reveal" style="--delay: 0.12s">
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="pill">2026</span>
+              <span class="pill ghost">Project</span>
+            </div>
+            <h3>VolunteerHub</h3>
+            <p>A volunteer-focused web platform. I'm preparing the public overview and links.</p>
+          </div>
+        </li>
+        <li class="timeline-item reveal" style="--delay: 0.18s">
+          <div class="timeline-card timeline-current">
+            <div class="timeline-meta">
+              <span class="pill">Next</span>
+              <span class="pill ghost">Goal</span>
+            </div>
+            <h3>Aspiring Software Engineer</h3>
+            <p>Growing my fundamentals and looking for opportunities to build software that matters.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ CURRENTLY LEARNING ============ -->
+    <section class="section container" id="learning" aria-labelledby="learning-title">
+      <div class="section-head reveal">
+        <p class="kicker">05 · Currently learning</p>
+        <h2 id="learning-title">Always one concept deeper.</h2>
+        <p>A living snapshot of what I'm exploring. I update it as I learn.</p>
+      </div>
+
+      <div class="learning-grid">
+        <article class="learning-card reveal">
+          <span class="learning-icon"><svg class="icon" aria-hidden="true"><use href="#i-code" /></svg></span>
+          <h3>Advanced React patterns</h3>
+          <p>Composable components, cleaner state, and maintainable UI architecture.</p>
+          <span class="learning-tag">Exploring</span>
+        </article>
+        <article class="learning-card reveal" style="--delay: 0.06s">
+          <span class="learning-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield" /></svg></span>
+          <h3>TypeScript &amp; type-safe APIs</h3>
+          <p>Stronger contracts between the frontend, backend, and database.</p>
+          <span class="learning-tag">Exploring</span>
+        </article>
+        <article class="learning-card reveal" style="--delay: 0.12s">
+          <span class="learning-icon"><svg class="icon" aria-hidden="true"><use href="#i-database" /></svg></span>
+          <h3>Database design &amp; SQL</h3>
+          <p>Modeling relationships and writing queries that stay efficient.</p>
+          <span class="learning-tag">Exploring</span>
+        </article>
+        <article class="learning-card reveal" style="--delay: 0.18s">
+          <span class="learning-icon"><svg class="icon" aria-hidden="true"><use href="#i-server" /></svg></span>
+          <h3>Backend architecture</h3>
+          <p>Structuring REST APIs that remain simple as projects grow.</p>
+          <span class="learning-tag">Exploring</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ GITHUB ACTIVITY ============ -->
+    <section class="section container" id="github" aria-labelledby="github-title">
+      <div class="section-head reveal">
+        <p class="kicker">06 · GitHub</p>
+        <h2 id="github-title">Building in public.</h2>
+        <p>A live snapshot from my GitHub profile. For the full contribution graph, visit GitHub.</p>
+      </div>
+
+      <div class="github-panel reveal" id="github-panel" data-user="shashank192008">
+        <div class="github-profile">
+          <div class="github-avatar" aria-hidden="true">GS</div>
+          <div class="github-id">
+            <h3>@shashank192008</h3>
+            <p>Student developer · building practical projects</p>
+          </div>
+          <a class="btn btn-sm btn-ghost" href="https://github.com/shashank192008" target="_blank" rel="noopener">
+            View profile
+            <svg class="icon" aria-hidden="true"><use href="#i-external" /></svg>
+          </a>
+        </div>
+
+        <div class="github-stats">
+          <div class="gh-stat"><strong data-gh-repos>1</strong><span>Public repos</span></div>
+          <div class="gh-stat"><strong data-gh-lang>TypeScript</strong><span>Primary language</span></div>
+          <div class="gh-stat"><strong data-gh-push>Nov 2026</strong><span>Latest push</span></div>
+          <div class="gh-stat"><strong data-gh-since>2026</strong><span>Building since</span></div>
+        </div>
+
+        <div class="github-latest">
+          <div class="latest-head">
+            <span class="badge">Latest repository</span>
+            <a href="https://github.com/shashank192008/msme-sahayak" target="_blank" rel="noopener">
+              Open repo
+              <svg class="icon" aria-hidden="true"><use href="#i-external" /></svg>
+            </a>
+          </div>
+          <h3 data-gh-repo-name>msme-sahayak</h3>
+          <p data-gh-repo-desc>MSME Sahayak – Business Support and Resource Portal</p>
+          <div class="latest-meta">
+            <span class="lang-dot" aria-hidden="true"></span>
+            <span data-gh-repo-lang>TypeScript</span>
+            <span aria-hidden="true">·</span>
+            <span data-gh-repo-updated>Updated Nov 2026</span>
+          </div>
+        </div>
+
+        <p class="github-note">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span id="github-status">Live profile data loads automatically.</span>
+          <a href="https://github.com/shashank192008" target="_blank" rel="noopener">
+            View contribution graph
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right" /></svg>
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ WHAT I CAN BUILD ============ -->
+    <section class="section container" id="build" aria-labelledby="build-title">
+      <div class="section-head reveal">
+        <p class="kicker">07 · What I can build</p>
+        <h2 id="build-title">From data model to polished interface.</h2>
+        <p>The kind of work I enjoy and the problems I'm ready to take on.</p>
+      </div>
+
+      <div class="build-grid">
+        <article class="build-card reveal">
+          <span class="build-number">01</span>
+          <span class="build-icon"><svg class="icon" aria-hidden="true"><use href="#i-layout" /></svg></span>
+          <h3>Full-stack dashboards</h3>
+          <p>Data-rich interfaces backed by relational databases and clean APIs.</p>
+        </article>
+        <article class="build-card reveal" style="--delay: 0.06s">
+          <span class="build-number">02</span>
+          <span class="build-icon"><svg class="icon" aria-hidden="true"><use href="#i-server" /></svg></span>
+          <h3>REST APIs</h3>
+          <p>Structured endpoints with validation, sensible errors, and predictable data.</p>
+        </article>
+        <article class="build-card reveal" style="--delay: 0.12s">
+          <span class="build-number">03</span>
+          <span class="build-icon"><svg class="icon" aria-hidden="true"><use href="#i-globe" /></svg></span>
+          <h3>Responsive web apps</h3>
+          <p>Mobile-first React interfaces that stay fast and usable at every size.</p>
+        </article>
+        <article class="build-card reveal" style="--delay: 0.18s">
+          <span class="build-number">04</span>
+          <span class="build-icon"><svg class="icon" aria-hidden="true"><use href="#i-gauge" /></svg></span>
+          <h3>Practical business tools</h3>
+          <p>Software for real workflows, from invoices and inventory to reporting.</p>
+        </article>
+      </div>
+
+      <div class="build-cta reveal">
+        <p>Have a project or opportunity in mind?</p>
+        <a class="btn btn-primary" href="#contact">
+          Let's talk
+          <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section-contact container" id="contact" aria-labelledby="contact-title">
+      <div class="contact-panel reveal">
+        <div class="contact-glow" aria-hidden="true"></div>
+
+        <div class="contact-copy">
+          <p class="kicker">08 · Contact</p>
+          <h2 id="contact-title">Let's build something useful.</h2>
+          <p>
+            I'm a student developer looking for opportunities to learn, collaborate, and contribute. If you
+            have a project idea, feedback, or a role in mind, I'd love to hear from you.
+          </p>
+
+          <div class="contact-card">
+            <span class="contact-card-icon"><svg class="icon" aria-hidden="true"><use href="#i-github" /></svg></span>
+            <div class="contact-card-text">
+              <span>Find me on GitHub</span>
+              <a href="https://github.com/shashank192008" target="_blank" rel="noopener">@shashank192008</a>
+            </div>
+            <button
+              class="copy-btn"
+              id="copy-github"
+              type="button"
+              data-copy="shashank192008"
+              aria-label="Copy GitHub username"
+            >
+              <svg class="icon" aria-hidden="true"><use href="#i-copy" /></svg>
+              <span>Copy</span>
+            </button>
+          </div>
+
+          <ul class="contact-points">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Open to collaboration and learning opportunities</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Interested in full-stack web projects</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Best reached through GitHub right now</li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required minlength="2" aria-describedby="name-error" />
+            <span class="field-error" id="name-error" aria-live="polite"></span>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="email-error" />
+            <span class="field-error" id="email-error" aria-live="polite"></span>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about the project, role, or idea..." required minlength="10" aria-describedby="message-error"></textarea>
+            <span class="field-error" id="message-error" aria-live="polite"></span>
+          </div>
+
+          <div class="hp-field" aria-hidden="true">
+            <label for="company">Company</label>
+            <input id="company" name="company" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <button class="btn btn-primary form-submit" type="submit">
+            <span class="spinner" aria-hidden="true"></span>
+            <svg class="icon send-icon" aria-hidden="true"><use href="#i-send" /></svg>
+            <span class="submit-label">Send message</span>
+          </button>
+
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="#top" aria-label="God Shashank — back to top">
+          <span class="brand-mark">GS</span>
+          <span class="brand-text">God Shashank<span class="brand-dot">.</span></span>
+        </a>
+        <p>Student Developer · Aspiring Software Engineer</p>
+        <p class="footer-note">Building practical projects, one commit at a time.</p>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h4>Explore</h4>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Work</a>
+          <a href="#journey">Journey</a>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <a href="https://github.com/shashank192008" target="_blank" rel="noopener">GitHub</a>
+          <a href="#contact">Contact</a>
+          <a href="#learning">Learning</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span id="year">2026</span> God Shashank. All rights reserved.</p>
+      <p>Built with HTML, CSS &amp; vanilla JavaScript.</p>
+      <a href="#top">Back to top <svg class="icon" aria-hidden="true"><use href="#i-arrow-up" /></svg></a>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top">
+    <svg class="icon" aria-hidden="true"><use href="#i-arrow-up" /></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
